@@ -8,6 +8,7 @@ namespace ConsoleApplication12
     {
         static void Main()
         {
+            ///пример работы такой
             while (true)
             {
                 Console.Write("Введите уравнение: ");
