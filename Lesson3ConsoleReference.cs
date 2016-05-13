@@ -25,7 +25,7 @@ namespace ConsoleReference
         }
 
         /// <summary>
-        /// 
+        /// Метод для использования в предикатах
         /// </summary>
         /// <param name="n">номер</param>
         /// <param name="a">адрес</param>
@@ -37,6 +37,9 @@ namespace ConsoleReference
             this.name = na;
         }
 
+        /// <summary>
+        /// Метод для поиска предикатах
+        /// </summary>
         public bool Findname(Spravochnik sp)
         {
             return sp.name == name; ;
@@ -55,6 +58,9 @@ namespace ConsoleReference
 
     class EntryMainPoint
     {
+        /// <summary>
+        /// Программа справочника
+        /// </summary>
             public static void Main()
         {
             string selection;
@@ -66,6 +72,8 @@ namespace ConsoleReference
             List<Spravochnik> mylist = new List<Spravochnik>();
 
             Console.WriteLine("Консольный справочник с функциями\nудаление\nдобавления\nпоиска по адресу,имени,номеру");
+            
+            //Цикл основного тела программы
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
