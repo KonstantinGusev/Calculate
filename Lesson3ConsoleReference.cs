@@ -6,17 +6,30 @@ using System.Threading.Tasks;
 
 namespace ConsoleReference
 {
+    /// <summary>
+    /// Отдельный класс для справочника
+    /// </summary>
     class Spravochnik
     {
         int nomer;
         string adress;
         string name;
 
+        /// <summary>
+        /// Метод для вывода поиска
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return String.Format("Абонент по имени:{0}\nзарегистрирован за номером:{1}\nпроживает по адресу:{2}", name, nomer, adress);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n">номер</param>
+        /// <param name="a">адрес</param>
+        /// <param name="na">имя</param>
         public Spravochnik(int n, string a, string na)
         {
             this.nomer = n;
@@ -62,23 +75,22 @@ namespace ConsoleReference
                 switch (selection)
                 {
                     case "p":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Введите имя абонента:");
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        name = Console.ReadLine();
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Введите номер абонента:");
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        number = Convert.ToInt32(Console.ReadLine());
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Введите адрес абонента:");
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        adress = Console.ReadLine();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        mylist.Add(new Spravochnik(number, adress, name));
                         do
                         {
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine("Введите имя абонента:");
-                            Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            name = Console.ReadLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine("Введите номер абонента:");
-                            Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            number = Convert.ToInt32(Console.ReadLine());
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine("Введите адрес абонента:");
-                            Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            adress = Console.ReadLine();
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            mylist.Add(new Spravochnik(number, adress, name));
-
                             Console.WriteLine(@"Выберете дальнейшее действие
 Найти c возможностью удаления
 1:      по номеру 
