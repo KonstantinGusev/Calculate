@@ -1,3 +1,0 @@
-﻿1>------ Сборка начата: проект: ConsoleApplication26, Конфигурация: Debug Any CPU ------
-1>  ConsoleApplication26 -> C:\Users\Boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\bin\Debug\ConsoleApplication26.exe
-========== Сборка: успешно: 1, с ошибками: 0, без изменений: 0, пропущено: 0 ==========
