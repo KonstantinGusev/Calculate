@@ -1,6 +1,0 @@
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\bin\Debug\ConsoleApplication26.exe.config
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\bin\Debug\ConsoleApplication26.exe
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\bin\Debug\ConsoleApplication26.pdb
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\obj\Debug\ConsoleApplication26.csprojResolveAssemblyReference.cache
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\obj\Debug\ConsoleApplication26.exe
-c:\users\boss\documents\visual studio 2015\Projects\ConsoleApplication26\ConsoleApplication26\obj\Debug\ConsoleApplication26.pdb
