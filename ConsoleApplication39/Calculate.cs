@@ -75,8 +75,17 @@ namespace Calculate
                 {
                     MD = Math.Pow(GetLeftOperand(i), GetRightOperand(i));
                 }
-                else
-                
+                else if (InBrackets[i] == '!')
+                {
+                    int factorial = 1;
+                    for (int j = 1; j <= GetLeftOperand(i); j++)
+                    {
+                        factorial = factorial * j;
+                    }
+
+                    MD = factorial;
+                }
+                    else
                     MD = GetLeftOperand(i) / GetRightOperand(i);
                     ReplaceExp(i, MD);
                 
@@ -101,13 +110,14 @@ namespace Calculate
                 int i;
                 //в первую очередь считаем умножение и деление
                 for (i = 0; i < InBrackets.Length; i++)
-                    if (InBrackets[i] == '*' || InBrackets[i] == '/' || InBrackets[i] == '^')
+                    if (InBrackets[i] == '*' || InBrackets[i] == '/' || InBrackets[i] == '^' || InBrackets[i] == '!')
                     {
                         repMD(i); //отправляем номер символа в котором стоит оператор в метод repMD, 
                                   //он посчитает произведение или частное двух операндов стоящих вокруг него и заменит их на ответ
                         return; //выход из взаимной рекурсии
                     }
-                //когда * и / закончились, начинаем считать + и -
+
+                //когда * ^ ! / закончились, начинаем считать + и -
                 for (i = 0; i < InBrackets.Length; i++)
                     if (InBrackets[i] == '+' || InBrackets[i] == '-')
                     {
@@ -139,6 +149,7 @@ namespace Calculate
                 }
                 return false;
             }//здесь будут хранится выражения в скобках
+          
             static void Main(string[] args)
             {
                 while (true)
